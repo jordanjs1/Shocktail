@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
+    <!-- Materalize -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- materialize icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/styleMain.css">
+    </link>
+    <link href="https://fonts.googleapis.com/css?family=Advent+Pro|Bubbler+One|Gruppo|Inknut+Antiqua|Marcellus|Thasadith&display=swap" rel="stylesheet">
+ 
+</head>
+
+<body>
+  
+        <div class="jumbotron">
+            <div class="container">
+                <div id="slide-out" class="sidenav">
+                    <div class="col s4">
+                        <div class="coctailSearch">
+
+                                <h4>Ingredients</h4>
+                                <!-- dropdown for alcoholic -->
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropAlco"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Alcoholic
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropAlco" id="dropAlcoDiv">
+                                        <form action="" method="post" id="alcoholic">
+                                           
+
+                                            
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <!-- dropdown for non-alcoholic -->
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropNonAlco"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Non alcoholic
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropNonAlco" id="dropNonAlcoDiv">
+                                        <form action="" method="post" id="nonAlcoholic">
+                                          
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <!-- dropdown for fruits -->
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropFruits"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Fruits
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropFruits" id="dropFruitsDiv">
+                                        <form action="" method="post" id="fruits">
+                                            
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-outline-dark" id="results" onclick="searchByIngredients(event)">
+                                    Show results
+                                </button>
+
+
+                        </div>
+                    </div>
+                </div>
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+                <div class="appName">
+                <img class='logo' src="../assets/images/icon1_.png" alt="">
+                <h1 class="display-4">SHOCKTAIL</h1>
+            </div>
+           
+
+
+            </div>
+        </div>
+
+
+        <div class="container">        
+       
+        <div class="carousel"></div>
+
+           <!-- searchbar which cocktail do you want -->
+           <div class="searchBar">
+                <form >
+                    <div class="row searchRow">
+                        <div class="input-field">
+                            <input id="usersInputName" type="text">
+                            <label for="usersInputName">what coctail do you want to make?</label>
+                        </div>
+                        <button class="btn btn-outline-dark mt-4 ml-5" onclick="searchByName(event)">
+                            show
+                        </button>
+                    </div>
+                </form>
+
+
+               
+                <div class="row randomDrink">
+                        <button type="submit" class="btn btn-outline-dark waves-effect waves-light" id="shocked" onclick="showRandom()">
+                            Shocktail Me
+                        </button>
+                      
+                    </div>
+            </div>
+        
+             <!-- display result -->
+        <div class="coctailsList" id="coctailsList">     
+
+            <div class="column" id='col1' ></div>
+            <div class="column"></div>
+        </div>       
+    </div>
+
+    <script src="../assets/javascript/script.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();    
+        });
+    </script>
+
+ <!--shocktail drink  -->
+     <div class="popUp"> </div>
+                 
+</body>
+
+</html>

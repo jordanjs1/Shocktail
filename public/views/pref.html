@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project 2</title>
+
+    <!-- Compiled and minified JavaScript -->
+
+    <link type="text/css" rel="stylesheet" href="../assets/css/materialize.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/glass.css" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/style.css" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/wine.css" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/tequila.css" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/beer.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- js file -->
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+
+    <!-- materalize Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--materalize js file -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script type="text/javascript" src="https://leaverou.github.io/prefixfree/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../assets/javascript/auth.js"></script>
+    <script type="text/javascript" src="../assets/javascript/login.js"></script>
+
+</head>
+
+<body>
+
+
+
+    <!-- <div id="modal1" class="modal modal-fixed-footer">
+
+        <div class="modal-content">
+            <div class="box-right">
+                <h3>Age Verification</h3>
+                <p>By clicking enter, I certify that I am over the age of 21 and will comply with the above statement.
+                </p>
+
+                <a href="#" class="btn btn-alpha" id="agree">Agree</a>
+
+                <p class="decor-line"><span>Or</span></p>
+
+                <a href="#" class="btn btn-beta" id="disagree">Disagree</a>
+
+                <small>Always enjoy responsibily.</small>
+            </div>
+        </div>
+
+        <div class="overlay-verify"></div>
+    </div> -->
+
+    <!-- Modal Trigger -->
+    <!-- <a id="modal1" class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Age Verification</h4>
+            <p>By clicking enter, I certify that I am over the age of 21 and will comply with the above statement.
+            </p>
+        </div>
+        <div class="modal-footer">
+
+            <a href="#" class="btn btn-alpha modal-close waves-effect waves-green btn-flat" id="agree">Agree</a>
+            <a href="#" class="btn btn-beta modal-close waves-effect waves-green btn-flat" id="disagree">Disagree</a>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col s12 m12">
+            <div class="jumbotron" id="jumbo">
+                <div class="container">
+                    <div class="appName">
+                        <img src="../assets/images/icon1.png" alt="">
+                        <h1 class="black-text  ">SHOCKTAIL</h1>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="tequila-sunrise">
+                    <div class="strow">
+                        <div class="strow-bottom"></div>
+                        <div class="strow-top"></div>
+                    </div>
+                    <div class="tequila-glass"></div>
+                    <div class="tequila"></div>
+                </div>
+
+            </div>
+            <div class="col s12 m4">
+                <div id="plate">
+
+                    <div id="bottle">
+                        <div class="cork"></div>
+                        <div class="neck"></div>
+                        <div class="body">
+                            <div class="label"></div>
+                            <div class="label-shadow"></div>
+                        </div>
+                    </div>
+
+                    <div id="cork">
+                    </div>
+
+                    <div id="glass">
+                        <div class="bowl">
+                            <div class="wine"></div>
+                        </div>
+                        <div class="stem"></div>
+                        <div class="foot"></div>
+                    </div>
+                </div>
+
+                <!-- <h1>LAST<br/>GLASS</h1> -->
+            </div>
+            <div class="col s12 m4">
+                <div class="wrapper">
+                    <div class="glass-wrapper">
+                        <div class="glass">
+                            <div class="beer">
+                                <div class="foam"><span class="foambubble"></span><span class="foambubble"></span><span
+                                        class="foambubble"></span><span class="foambubble"></span><span
+                                        class="foambubble"></span></div>
+                                <div class="bubbles"><span class="bubble"></span><span class="bubble"></span><span
+                                        class="bubble"></span><span class="bubble"></span><span
+                                        class="bubble"></span><span class="bubble"></span><span
+                                        class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="foamtop"><span class="ft-bubble"></span><span class="ft-bubble"></span><span
+                                class="ft-bubble"></span><span class="ft-bubble"></span></div>
+                        <div class="coaster"></div>
+                    </div> -->
+                        <!-- <div class="disclaimer">
+                        <p>👋 Feel free to use this! If you do, let me know via Twitter :) => <a
+                                href="https://twitter.com/herrbertling">@herrbertling</a></p>
+                    </div> -->
+                    </div>
+
+                </div>
+                <!-- <div class="card black">
+                    <div id="glassHeight" class="card-content">
+                        <div id="cock">
+                            <div class="cocktail-glass">
+                                <div class="glass1"></div>
+                                <div class="glass2"></div>
+                                <div class="glass3"></div>
+                            </div>
+                            <div class="martini">
+                                <div class="cocktail"></div>
+                            </div>
+                            <div class="s1"></div>
+                            <div class="s2"></div>
+                            <div class="olive"></div>
+                            <div class="bubbles"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator"
+                            src="https://www.tracysnewyorklife.com/wp-content/uploads/2019/05/liquor-bottles-400x400.jpeg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Alcoholic<i
+                                class="material-icons right">more_vert</i></span>
+                        <!-- <p><a href="#">This is a link</a></p> -->
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Alcoholic<i
+                                class="material-icons right">close</i></span>
+
+                        <div class="container-fluid" id="alcoholicBtn">
+
+                            <div class="row">
+                                <div class="col s6">
+                                    <a class="waves-effect waves-light btn-small" data-bool="false" id="vodka">Vodka</a>
+                                </div>
+                                <div class="col s6">
+                                    <a class="waves-effect waves-light btn-small" data-bool="false" id="rum">Rum</a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col s6">
+                                    <a class="waves-effect waves-light btn-small" data-bool="false"
+                                        id="tequila">Tequila</a>
+                                </div>
+                                <div class="col s6">
+                                    <a class="waves-effect waves-light btn-small" data-bool="false" id="gin">Gin</a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col s6">
+                                    <a class="waves-effect waves-light btn-small" data-bool="false"
+                                        id="triple_sec">Triple
+                                        Sec</a>
+                                </div>
+                                <div class="col s6">
+
+                                    <a class="waves-effect waves-light btn-small" data-bool="false"
+                                        id="whiskey">Whiskey</a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col s6">
+                                    <a class="waves-effect waves-light btn-small" data-bool="false"
+                                        id="kahlua">Kahlua</a>
+                                </div>
+                                <div class="col s6">
+                                    <a class="waves-effect waves-light btn-small" data-bool="false"
+                                        id="champagne">Champagne</a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col s6">
+                                    <a class="waves-effect waves-light btn-small" data-bool="false"
+                                        id="jagermeister">Jagermeister</a>
+                                </div>
+                                <div class="col s6">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator"
+                            src="https://southboundvapes.com/wp-content/uploads/2016/06/LEMONLIME-600x600.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Fruits<i
+                                class="material-icons right">more_vert</i></span>
+                        <!-- <p><a href="#">This is a link</a></p> -->
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Fruits<i
+                                class="material-icons right">close</i></span>
+                        <div class="container-fluid" id="fruitsBtn">
+
+                            <div class="row">
+                                <div class="col s6">
+                                    <a class="waves-effect waves-light btn-small" data-bool="false"
+                                        id="orange">Orange</a>
+                                </div>
+                                <div class="col s6">
+                                    <a class="waves-effect waves-light btn-small" data-bool="false"
+                                        id="banana">Banana</a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col s6">
+                                    <a class="waves-effect waves-light btn-small" data-bool="false" id="lemon">Lemon</a>
+                                </div>
+                                <div class="col s6">
+                                    <a class="waves-effect waves-light btn-small" data-bool="false"
+                                        id="pineapple">Pineapple</a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col s6">
+                                    <a class="waves-effect waves-light btn-small" data-bool="false" id="lime">Lime</a>
+
+                                </div>
+                                <div class="col s6">
+                                    <a class="waves-effect waves-light btn-small" data-bool="false"
+                                        id="strawberry">Strawberry</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator"
+                            src="https://gd.image-gmkt.com/MONIN-SYRUP-700ML-1000ML/li/946/601/804601946.g_400-w_g.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Non-Alcoholic<i
+                                class="material-icons right">more_vert</i></span>
+                        <!-- <p><a href="#">This is a link</a></p> -->
+
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Non-Alcoholic<i
+                                class="material-icons right">close</i></span>
+                        <div class="container-fluid" id="nonAlcoholicBtn">
+
+                            <div class="row">
+                                <div class="col s6">
+                                    <a class="waves-effect waves-light btn-small" data-bool="false" id="cream">Cream</a>
+                                </div>
+                                <div class="col s6">
+                                    <a class="waves-effect waves-light btn-small" data-bool="false"
+                                        id="orange_juice">Orange
+                                        Juice</a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col s6">
+                                    <a class="waves-effect waves-light btn-small" data-bool="false" id="milk">Milk</a>
+                                </div>
+                                <div class="col s6">
+                                    <a class="waves-effect waves-light btn-small" data-bool="false"
+                                        id="cranberry_juice">Cranberry
+                                        Juice</a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col s6">
+                                    <a class="waves-effect waves-light btn-small" data-bool="false" id="soda_water">Soda
+                                        Water</a>
+
+                                </div>
+                                <div class="col s6">
+                                    <a class="waves-effect waves-light btn-small" data-bool="false" id="coffee">Coffee
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col s6">
+                                    <a class="waves-effect waves-light btn-small" data-bool="false" id="coca-cola">
+                                        Coca-Cola</a>
+
+                                </div>
+                                <div class="col s6">
+                                    <a class="waves-effect waves-light btn-small" data-bool="false"
+                                        id="sugar_syrup">Sugar
+                                        Syrup</a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col s6">
+                                    <a class="waves-effect waves-light btn-small" data-bool="false"
+                                        id="grenadine">Grenadine</a>
+
+                                </div>
+                                <div class="col s6">
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col s12 m3">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Card Title</span>
+                    <p>I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+        </div> -->
+        </div>
+
+
+    </div>
+    <a href="/main" class="btn waves-effect waves-light" type="submit" id="submit" name="action">Submit
+        <i class="material-icons right">send</i>
+    </a>
+
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        $('.modal').modal({
+            opacity: 1,
+            dismissible: false
+        });
+        $('.modal').modal('open');
+    });
+
+    $(document).on("click", "#submit", function () {
+        var username;
+
+        $.get("/api/users/:id", {
+            where: {
+                id: req.params.id
+            }
+        }, function (data) {
+            username = data.username;
+        });
+
+        $.post("/api/pref", {
+            vodka: $("#vodka").attr("data-bool"),
+            rum: $("#rum").attr("data-bool"),
+            tequila: $("#tequila").attr("data-bool"),
+            gin: $("#gin").attr("data-bool"),
+            triple_sec: $("#triple_sec").attr("data-bool"),
+            whiskey: $("#whiskey").attr("data-bool"),
+            kahlua: $("#kahlua").attr("data-bool"),
+            champagne: $("#champagne").attr("data-bool"),
+            jagermeister: $("#jagermeister").attr("data-bool"),
+            orange: $("#orange").attr("data-bool"),
+            banana: $("#banana").attr("data-bool"),
+            lemon: $("#lemon").attr("data-bool"),
+            pineapple: $("#pineapple").attr("data-bool"),
+            lime: $("#lime").attr("data-bool"),
+            strawberries: $("#strawberries").attr("data-bool"),
+            cream: $("#cream").attr("data-bool"),
+            orange_juice: $("#orange_juice").attr("data-bool"),
+            milk: $("#milk").attr("data-bool"),
+            cranberry_juice: $("#cranberry_juice").attr("data-bool"),
+            soda_water: $("#soda_water").attr("data-bool"),
+            coffee: $("#coffee").attr("data-bool"),
+            coca_cola: $("#coca-cola").attr("data-bool"),
+            sugar: $("#sugar").attr("data-bool"),
+            grenadine: $("#grenadine").attr("data-bool")
+
+        }).then(function (data, status) {
+            alert("Data: " + data + "\nStatus: " + status);
+        });
+
+        window.location = "/main";
+    })
+
+    $(document).on("click", ".btn-small", function () {
+        console.log("hello");
+        var bool = $(this).attr("data-bool");
+        if (bool === "0") {
+
+            $(this).attr("data-bool", "1")
+            $(this).addClass("red");
+            bool = $(this).attr("data-bool");
+            console.log(bool);
+        }
+        else {
+            $(this).attr("data-bool", "0")
+            $(this).removeClass("red");
+            bool = $(this).attr("data-bool");
+            console.log(bool);
+        }
+
+    })
+
+    $(document).on("click", "#agree", function () {
+        $('.modal').modal('close');
+    })
+
+    $(document).on("click", "#disagree", function () {
+        alert(
+            "You should be at least 21 to enter.",
+
+
+        )
+        $('.modal').modal('open');
+
+    })
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</html>

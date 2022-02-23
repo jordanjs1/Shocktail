@@ -1,0 +1,65 @@
+<<<<<<< HEAD
+/* #cock {
+=======
+#cock {
+>>>>>>> 365926c0b0b06d15af734f0855717a84d7324983
+    position: absolute;
+    left: 47.5%;
+    top: 47.5%;
+    width: 0.5vw;
+    height: 1vh;
+}
+
+#glassHeight {
+    height: 255px;
+    width: 100px;
+<<<<<<< HEAD
+} */
+
+.card-image{
+    height: 350px
+}
+
+.appName {
+    display: flex;
+    justify-content: center;
+  }
+  #jumbo{
+    background: url(../images/bg10.jpg) no-repeat center;
+  }
+
+  /* pref page button */
+  #animationRow {
+    margin: 25px 0px;
+}
+
+#alcoholicBtn,
+#nonAlcoholicBtn,
+#fruitsBtn {
+    margin-top: 20px;
+}
+
+#alcoholicBtn .row .col .btn-small {
+    width: 125px;
+    border-radius: 20px;
+    background-color: rgba(0, 56, 65);
+}
+
+#nonAlcoholicBtn .row .col .btn-small {
+    width: 125px;
+    border-radius: 20px;
+    background-color: rgba(0, 56, 65);
+}
+
+#fruitsBtn .row .col .btn-small {
+    width: 125px;
+    border-radius: 20px;
+    background-color: rgba(0, 56, 65);
+}
+#submit{
+    background-color: rgba(0, 56, 65);
+    border-radius: 50px;
+}
+=======
+}
+>>>>>>> 365926c0b0b06d15af734f0855717a84d7324983

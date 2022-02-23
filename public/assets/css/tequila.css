@@ -1,0 +1,268 @@
+/* body {
+    background: #3498db;
+    padding-top: 50px;
+  } */
+  .tequila-sunrise {
+    width: 200px;
+    height: 250px;
+    margin: auto;
+  }
+  .tequila-sunrise .tequila-glass {
+    margin: auto;
+    width: 100px;
+    height: 250px;
+    background: #fff;
+    opacity: 0.4;
+    border-radius: 5px 5px 10px 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  }
+  .tequila-sunrise .tequila {
+    margin: auto;
+    position: relative;
+    bottom: 240px;
+    width: 90px;
+    height: 200px;
+    background: linear-gradient(to top, rgba(255, 0, 0, 0.8), rgba(241, 196, 15, 0.8));
+    background: -moz-linear-gradient(bottom, rgba(255, 0, 0, 0.8), rgba(241, 196, 15, 0.8));
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 0, 0, 0.8)), to(rgba(241, 196, 15, 0.8)));
+    border-radius: 5px 5px 10px 10px;
+    box-shadow: inset 2px -2px 10px rgba(0, 0, 0, 0.08);
+    animation-name: filltequila;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 100ms;
+    animation-duration: 1500ms;
+    -moz-animation-name: filltequila;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -moz-animation-delay: 100ms;
+    -moz-animation-duration: 1500ms;
+    -webkit-animation-name: filltequila;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 100ms;
+    -webkit-animation-duration: 4000ms;
+  }
+  .tequila-sunrise .strow {
+    position: relative;
+    top: 0px;
+    animation-name: strowFall;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-delay: 100ms;
+    animation-duration: 1500ms;
+    -moz-animation-name: strowFall;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in;
+    -moz-animation-delay: 100ms;
+    -moz-animation-duration: 3000ms;
+    -webkit-animation-name: strowFall;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-delay: 100ms;
+    -webkit-animation-duration: 4000ms;
+  }
+  .tequila-sunrise .strow .strow-top {
+    background: rgba(0, 0, 0, 0.75);
+    position: relative;
+    top: -20px;
+    left: 140px;
+    width: 65px;
+    height: 7px;
+    transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-20deg);
+    /* Opera, Chrome, and Safari */
+  }
+  .tequila-sunrise .strow .strow-bottom {
+    background: rgba(0, 0, 0, 0.75);
+    position: relative;
+    top: 98px;
+    left: 3px;
+    width: 215px;
+    height: 7px;
+    transform: rotate(108deg);
+    -ms-transform: rotate(108deg);
+    /* IE 9 */
+    -webkit-transform: rotate(108deg);
+    /* Opera, Chrome, and Safari */
+  }
+  @keyframes filltequila {
+    0% {
+      height: 0;
+      bottom: 40px;
+    }
+    25% {
+      height: 50px;
+      bottom: 90px;
+    }
+    50% {
+      height: 100px;
+      bottom: 140px;
+    }
+    75% {
+      height: 150px;
+      bottom: 190px;
+    }
+    95%,
+    100% {
+      height: 200px;
+      bottom: 240px;
+    }
+  }
+  @keyframes strowFall {
+    0% {
+      top: -250px;
+      left: -26px;
+      transform: rotate(-18deg);
+      -ms-transform: rotate(-18deg);
+      -webkit-transform: rotate(-18deg);
+    }
+    40% {
+      top: 0px;
+      left: -26px;
+      transform: rotate(-24deg);
+      -ms-transform: rotate(-24deg);
+      -webkit-transform: rotate(-24deg);
+    }
+    60% {
+      top: -10px;
+      left: -70px;
+      transform: rotate(-30deg);
+      -ms-transform: rotate(-30deg);
+      -webkit-transform: rotate(-30deg);
+    }
+    80% {
+      top: -10px;
+      left: 0px;
+      transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      top: 0px;
+      transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+    }
+  }
+  @-moz-keyframes filltequila {
+    0% {
+      height: 0;
+      bottom: 40px;
+    }
+    25% {
+      height: 50px;
+      bottom: 90px;
+    }
+    50% {
+      height: 100px;
+      bottom: 140px;
+    }
+    75% {
+      height: 150px;
+      bottom: 190px;
+    }
+    90%,
+    100% {
+      height: 200px;
+      bottom: 240px;
+    }
+  }
+  @-moz-keyframes strowFall {
+    0% {
+      top: -250px;
+      left: -26px;
+      transform: rotate(-18deg);
+      -ms-transform: rotate(-18deg);
+      -webkit-transform: rotate(-18deg);
+    }
+    40% {
+      top: 0px;
+      left: -26px;
+      transform: rotate(-24deg);
+      -ms-transform: rotate(-24deg);
+      -webkit-transform: rotate(-24deg);
+    }
+    60% {
+      top: -10px;
+      left: -70px;
+      transform: rotate(-30deg);
+      -ms-transform: rotate(-30deg);
+      -webkit-transform: rotate(-30deg);
+    }
+    80% {
+      top: -10px;
+      left: 0px;
+      transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      top: 0px;
+      transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+    }
+  }
+  @-webkit-keyframes filltequila {
+    0% {
+      height: 0;
+      bottom: 40px;
+    }
+    25% {
+      height: 50px;
+      bottom: 90px;
+    }
+    50% {
+      height: 100px;
+      bottom: 140px;
+    }
+    75% {
+      height: 150px;
+      bottom: 190px;
+    }
+    90%,
+    100% {
+      height: 200px;
+      bottom: 240px;
+    }
+  }
+  @-webkit-keyframes strowFall {
+    0% {
+      top: -250px;
+      left: -26px;
+      transform: rotate(-18deg);
+      -ms-transform: rotate(-18deg);
+      -webkit-transform: rotate(-18deg);
+    }
+    40% {
+      top: 0px;
+      left: -26px;
+      transform: rotate(-24deg);
+      -ms-transform: rotate(-24deg);
+      -webkit-transform: rotate(-24deg);
+    }
+    60% {
+      top: -10px;
+      left: -70px;
+      transform: rotate(-30deg);
+      -ms-transform: rotate(-30deg);
+      -webkit-transform: rotate(-30deg);
+    }
+    80% {
+      top: -10px;
+      left: 0px;
+      transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      top: 0px;
+      transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+    }
+  }
+  
